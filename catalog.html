@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <header class="page-header">
+      <nav class="main-nav">
+        <a href="#" class="page-header__logo">
+          <img src="http://placehold.it/86x35" width="86" height="35" alt="Логотип магазина Мишка" class="page-header__logo-image">
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Вязание на&nbsp;заказ</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Поиск по&nbsp;сайту</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero__wrapper">
+          <h1 class="hero__title">Милые штуки ручной работы для&nbsp;дома</h1>
+          <ul class="hero__list">
+            <li class="hero__item">
+              <a href="" class="hero__link">
+                <span class="hero__text">Предметы интерьера</span>
+                <span class="icon icon--interior"></span>
+              </a>
+            </li>
+            <li class="hero__item">
+              <a href="" class="hero__link">
+                <span class="hero__text">Детские игрушки</span>
+                <span class="icon icon--toy"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main class="page-main">
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <h2 class="catalog__title visually-hidden">Каталог магазина Мишка</h2>
+          <article class="catalog__item goods">
+            <a href="" class="goods__image-link">
+              <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" class="goods__image">
+            </a>
+            <div class="goods__wrapper">
+              <h3 class="goods__title">
+                <a href="#" class="goods__title-link">Зайчик-попрыгайчик</a>
+              </h3>
+              <div class="goods__parameteres">
+                Рост 30&nbsp;см, вес 200&nbsp;г
+              </div>
+              <div class="goods__buy">
+                <span class="goods__cost">1 200&nbsp;руб.</span>
+                <a href="#" class="goods__basket" title="Положить в корзину">В корзину</a>
+              </div>
+            </div>
+          </article>
+          <article class="catalog__item goods">
+            <a href="" class="goods__image-link">
+              <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" class="goods__image">
+            </a>
+            <div class="goods__wrapper">
+              <h3 class="goods__title">
+                <a href="#" class="goods__title-link">Корзинка для&nbsp;белья</a>
+              </h3>
+              <div class="goods__parameteres">
+                Диаметр 15&nbsp;см, высота 10&nbsp;см
+              </div>
+              <div class="goods__buy">
+                <span class="goods__cost">690&nbsp;руб.</span>
+                <a href="#" class="goods__basket" title="Положить в корзину">В корзину</a>
+              </div>
+            </div>
+          </article>
+          <article class="catalog__item goods">
+            <a href="" class="goods__image-link">
+              <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" class="goods__image">
+            </a>
+            <div class="goods__wrapper">
+              <h3 class="goods__title">
+                <a href="#" class="goods__title-link">Большая корзинка для&nbsp;игрушек</a>
+              </h3>
+              <div class="goods__parameteres">
+                Диаметр 30&nbsp;см, высота 30&nbsp;см
+              </div>
+              <div class="goods__buy">
+                <span class="goods__cost">1 500&nbsp;руб.</span>
+                <a href="#" class="goods__basket" title="Положить в корзину">В корзину</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="video">
+        <div class="video__wrapper">
+          <h2 class="video__title">Процесс производства</h2>
+          <div class="video__video-player">
+            <img src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства" title="Процесс производства">
+          </div>
+          <div class="video__content">
+            <p class="video__description">
+              По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас подробное видео о&nbsp;том, как появляются наши товары.
+            </p>
+            <a class="video__order button" href="form.html">Сделать заказ</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="#" class="page-footer__logo">
+          <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка" class="page-footer__logo-image">
+        </a>
+        <div class="page-footer__social social">
+          <b class="social__title">Давайте дружить!</b>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мишка в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мишка в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мишка в Инстаграме</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+
+    <section class="modal">
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <p class="modal__choose">Выберите размер:</p>
+        <div class="modal__size-chart">
+          <input class="modal__input visually-hidden" type="radio" name="size" id="sizeS" value="S" checked>
+          <label class="modal__label" for="sizeS">S</label>
+          <input class="modal__input visually-hidden" type="radio" name="size" id="sizeM" value="M">
+          <label class="modal__label" for="sizeM">M</label>
+          <input class="modal__input visually-hidden" type="radio" name="size" id="sizeL" value="L">
+          <label class="modal__label" for="sizeL">L</label>
+        </div>
+        <button class="modal__add button button--green" type="submit">Добавить</button>
+      </form>
+    </section>
+
+  </body>
+</html>
