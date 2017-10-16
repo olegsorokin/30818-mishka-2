@@ -1,0 +1,18 @@
+.main-nav {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__toggle {}
+
+.main-nav__wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.main-nav__list {}
