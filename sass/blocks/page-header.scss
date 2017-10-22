@@ -2,11 +2,26 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $color-gray-background;
-}
+  min-height: 568px;
 
-.page-header__wrapper {
-  position: relative;
-  padding: 0 30px;
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    height: 17px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: center top;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 834px;
+
+    &::after {
+      display: block;
+    }
+  }
 }
