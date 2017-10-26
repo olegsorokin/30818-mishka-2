@@ -1,0 +1,16 @@
+.social {}
+
+.social__list {
+  width: 145px;
+  height: inherit;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.social__link {
+  @include link($black, $color-turquoise-hover);
+}
