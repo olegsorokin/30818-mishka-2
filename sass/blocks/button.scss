@@ -1,0 +1,42 @@
+.button {
+  display: block;
+  width: 100%;
+  color: $dark-gray;
+  line-height: 48px;
+  padding: 0 30px;
+  border: 2px solid $dark-gray;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: $white;
+    background-color: $dark-gray;
+  }
+
+  &:active,
+  &:focus {
+    color: rgba($white, 0.3);
+    background-color: $dark-gray;
+    outline: none;
+  }
+
+  &--green {
+    color: $white;
+    border: 2px solid $color-turquoise;
+    background-color: $color-turquoise;
+
+    &:hover {
+      background-color: $color-turquoise;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $color-turquoise;
+    }
+  }
+}
