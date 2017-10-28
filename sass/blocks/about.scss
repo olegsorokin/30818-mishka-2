@@ -1,0 +1,84 @@
+.about {}
+
+.about__wrapper {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  @include container();
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+  }
+}
+
+.about__header {
+
+  @media (min-width: $desktop-width) {
+    margin-right: 16.66%;
+    margin-left: 16.66%;
+  }
+}
+
+.about__title {
+  margin-top: 0;
+  font-size: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    font-size: 53px;
+  }
+}
+
+.about__list {
+  list-style-type: none;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 16.66%;
+    margin-left: 16.66%;
+  }
+}
+
+.about__item {
+  position: relative;
+  padding-top: 60px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    padding-right: 50px;
+    margin-bottom: 50px;
+
+    &--flower { order: 1; }
+    &--money  { order: 3; }
+    &--heart  { order: 5; }
+    &--ball   { order: 2; }
+    &--rocket { order: 4; }
+    &--gift   { order: 6; }
+  }
+
+  @media (min-width: $desktop-width) {}
+}
+
+.about__icon {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  transform: translate3d(-50%, -50%, 0);
+  fill: $color-turquoise;
+}
