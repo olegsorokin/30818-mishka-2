@@ -1,0 +1,34 @@
+.catalog__wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include container();
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 130px;
+  }
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
