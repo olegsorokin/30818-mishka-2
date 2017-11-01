@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 568px;
 
   &::after {
     content: '';
@@ -18,10 +17,33 @@
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 834px;
+    min-height: 153px;
 
     &::after {
       display: block;
     }
+  }
+}
+
+.page-header__wrapper {
+  background-color: $color-gray-background;
+}
+
+.page-header__title {
+  @include container();
+  margin: 75px auto 80px auto;
+  text-align: center;
+  font-size: 27px;
+  line-height: 1.2;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 105px;
+    margin-bottom: 88px;
+    font-size: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
+    font-size: 53px;
   }
 }
