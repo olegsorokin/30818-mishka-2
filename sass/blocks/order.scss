@@ -1,0 +1,18 @@
+.order {
+  padding-bottom: 55px;
+}
+
+.order__wrapper {
+  @include container();
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {}
+
+  @media (min-width: $desktop-width) {}
+}
+
+.order__info {
+  margin-bottom: 25px;
+  font-size: 13px;
+  line-height: 24px;
+}
