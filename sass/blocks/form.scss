@@ -1,0 +1,251 @@
+.form {}
+
+.form__fieldset-wrapper {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px;
+
+    &:nth-child(2n) {
+      background-color: $color-gray-background;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.form__fieldset {
+  padding: 20px 0 10px 0;
+  margin: 0;
+  border-color: $color-turquoise;
+  border-style: solid;
+  border-width: 0;
+  border-top-width: 1px;
+
+  @media (min-width: $tablet-width) {
+    border-top-width: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container();
+  }
+}
+
+.form__title {
+  padding-right: 25px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-turquoise;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -39px;
+  }
+}
+
+.form__radio-label {
+  position: relative;
+  display: block;
+  // margin-bottom: 15px;
+  padding-top: 10px;
+  // padding-bottom: 10px;
+  padding-left: 62px;
+  min-height: 39px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  box-sizing: border-box;
+  transition: transform 0.15s;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 39px;
+    height: 39px;
+    border: 2px solid $dark-gray;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #62d1ba;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: transform 0.15s;
+    transform: scale(0);
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $color-turquoise;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: rgba($dark-gray, 0.3);
+    }
+  }
+}
+
+.form__radio:checked + .form__radio-label::after {
+  transform: scale(1);
+}
+
+.form__checkbox-label {
+  position: relative;
+  display: block;
+  // margin-bottom: 25px;
+  padding-top: 10px;
+  // padding-bottom: 10px;
+  padding-left: 62px;
+  min-height: 39px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 39px;
+    height: 39px;
+    border-color: $dark-gray;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    width: 22px;
+    height: 10px;
+    border-color: $black;
+    border-style: solid;
+    border-width: 2px;
+    border-top: none;
+    border-right: none;
+    transform: scale(0) rotate(-15deg);
+    transition: transform 0.15s;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $color-turquoise;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: rgba($dark-gray, 0.3);
+    }
+  }
+}
+
+.form__checkbox:checked + .form__checkbox-label::after {
+  transform: scale(1) rotate(-45deg);
+}
+
+.form__radio:focus + .form__radio-label::before {
+  border-color: $color-turquoise;
+}
+
+.form__checkbox:focus + .form__checkbox-label::before {
+  border-color: $color-turquoise;
+}
+
+.form__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 167px;
+
+    .form__row:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.form__row {
+  padding-bottom: 24px;
+}
+
+.form__input-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  background-color: transparent;
+  border-color: $black;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+  outline: none;
+  font-size: 17px;
+  line-height: 18px;
+  transition: border-color 0.15s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-turquoise;
+  }
+}
+
+.form__textarea {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border-color: $dark-gray;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box;
+  resize: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-turquoise;
+  }
+}
+
+.form__footer {
+  padding: 0 30px;
+}
+
+.form__note {
+  display: block;
+  margin-bottom: 31px;
+}
