@@ -15,14 +15,14 @@
 @mixin link($color: $black, $fill: $color-turquoise) {
   transition: color 0.3s, fill 0.3s, opacity 0.3s;
 
-  &:hover {
+  &[href]:hover {
     transition: color 0.1s, fill 0.1s, opacity 0.1s;
     fill: $fill;
     color: rgba($color, 0.6);
   }
 
-  &:active,
-  &:focus {
+  &[href]:active,
+  &[href]:focus {
     fill: $fill;
     opacity: 0.3;
     outline: none;
