@@ -8,25 +8,25 @@
   background-position: center top;
   min-height: 489px;
 
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url(../img/hero-tablet@2x.jpg);
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-tablet@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     min-height: 746px;
     background-image: url("../img/hero-tablet@1x.jpg");
-  }
 
-  @media (min-width: $tablet-width) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: $tablet-width) and (min-resolution: $retina-dpi), (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
-    background-image: url("../img/hero-tablet@2x.jpg");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     background-image: url("../img/hero-desktop@1x.jpg");
-  }
 
-  @media (min-width: $desktop-width) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: $desktop-width) and (min-resolution: $retina-dpi), (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
-    background-image: url("../img/hero-desktop@2x.jpg");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 }
 
