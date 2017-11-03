@@ -10,7 +10,6 @@
 }
 
 .about__header {
-
   @media (min-width: $desktop-width) {
     margin-right: 16.66%;
     margin-left: 16.66%;
@@ -54,7 +53,6 @@
   position: relative;
   padding-top: 60px;
   box-sizing: border-box;
-  margin-bottom: 20px;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -63,14 +61,17 @@
     margin-bottom: 50px;
 
     &--flower { order: 1; }
+
     &--money  { order: 3; }
+
     &--heart  { order: 5; }
+
     &--ball   { order: 2; }
+
     &--rocket { order: 4; }
+
     &--gift   { order: 6; }
   }
-
-  @media (min-width: $desktop-width) {}
 }
 
 .about__icon {

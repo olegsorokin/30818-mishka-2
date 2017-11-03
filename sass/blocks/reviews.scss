@@ -1,10 +1,11 @@
 .reviews__wrapper {
   position: relative;
   padding-bottom: 40px;
+
   @include container();
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
@@ -145,14 +146,10 @@
     &--next {
       border-left-width: 0;
     }
-
   }
-
-  @media (min-width: $desktop-width) {}
 }
 
 .reviews__write {
-
   @media (min-width: $tablet-width) {
     order: 1;
     margin-left: auto;

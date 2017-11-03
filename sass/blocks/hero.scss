@@ -32,10 +32,11 @@
 
 .hero__wrapper {
   flex-grow: 1;
-  @include container();
   overflow: auto;
   width: 100%;
   box-sizing: border-box;
+
+  @include container();
 }
 
 .hero__title {
@@ -76,6 +77,7 @@
   color: $white;
   background-color: $color-turquoise;
   margin-bottom: -$hero-transform-size;
+
   &:nth-child(2n) {
     background-color: $color-turquoise-dark;
   }
@@ -92,10 +94,11 @@
 
 .hero__link {
   display: flex;
-  @include container();
   padding-top: 30px;
   padding-bottom: 30px + $hero-transform-size;
   transition: opacity 0.3s;
+
+  @include container();
 
   &:active,
   &:focus {

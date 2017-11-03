@@ -1,8 +1,7 @@
-.contacts {}
-
 .contacts__wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
+
   @include container();
 
   @media (min-width: $desktop-width) {
@@ -111,7 +110,6 @@
 }
 
 .contacts__write {
-
   @media (min-width: $tablet-width) {
     width: 230px;
     margin: 0 auto;

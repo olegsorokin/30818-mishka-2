@@ -20,8 +20,8 @@
     @include container();
     height: 88px;
     line-height: 88px;
-    flex-direction: row;
     flex-flow: wrap;
+    flex-direction: row;
     align-items: flex-start;
   }
 }
@@ -48,7 +48,6 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-
     &[href] {
       transition: opacity 0.3s;
 
@@ -86,7 +85,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 20px;

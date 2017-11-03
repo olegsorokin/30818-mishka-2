@@ -22,7 +22,6 @@
 }
 
 .page-footer__logo {
-
   @media (min-width: $tablet-width) {
     @include link($black, $color-turquoise-hover);
   }
