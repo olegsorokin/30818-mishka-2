@@ -85,7 +85,7 @@
 .goods__buy {
   display: flex;
   padding-top: 20px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid $color-gray-border;
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
