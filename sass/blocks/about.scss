@@ -60,17 +60,29 @@
     padding-right: 50px;
     margin-bottom: 50px;
 
-    &--flower { order: 1; }
+    &--flower {
+      order: 1;
+    }
 
-    &--money  { order: 3; }
+    &--money {
+      order: 3;
+    }
 
-    &--heart  { order: 5; }
+    &--heart {
+      order: 5;
+    }
 
-    &--ball   { order: 2; }
+    &--ball {
+      order: 2;
+    }
 
-    &--rocket { order: 4; }
+    &--rocket {
+      order: 4;
+    }
 
-    &--gift   { order: 6; }
+    &--gift {
+      order: 6;
+    }
   }
 }
 
