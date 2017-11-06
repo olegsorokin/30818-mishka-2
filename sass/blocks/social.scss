@@ -10,5 +10,6 @@
 }
 
 .social__link {
+  fill: #231f20;
   @include link($black, $color-turquoise-hover);
 }
