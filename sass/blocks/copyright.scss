@@ -7,16 +7,16 @@
 
   transition: color 0.3s, fill 0.3s, opacity 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transition: color 0.1s, fill 0.1s, opacity 0.1s;
     fill: $color-turquoise-hover;
+    outline: none;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     fill: $color-turquoise-hover;
     opacity: 0.3;
-    outline: none;
   }
   fill: $color-turquoise;
 }

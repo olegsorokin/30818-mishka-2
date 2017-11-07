@@ -14,16 +14,16 @@
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
     background-color: $dark-gray;
+    outline: none;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: rgba($white, 0.3);
     background-color: $dark-gray;
-    outline: none;
   }
 
   &--green {
@@ -31,12 +31,12 @@
     border: 2px solid $color-turquoise;
     background-color: $color-turquoise;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-turquoise;
     }
 
-    &:active,
-    &:focus {
+    &:active {
       background-color: $color-turquoise;
     }
   }

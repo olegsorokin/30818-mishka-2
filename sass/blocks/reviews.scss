@@ -110,21 +110,21 @@
   height: 50px;
   box-sizing: border-box;
   padding: 0;
+  font-size: 0;
   border-color: $color-gray-border;
   border-width: 0;
   overflow: hidden;
-  text-indent: -9999px;
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
 
-  &--prev {
-    background-image: url("../img/icon-left-arrow.svg");
+  svg {
+    display: block;
+    margin: 0 auto;
   }
 
   &--next {
-    background-image: url("../img/icon-right-arrow.svg");
     border-left-width: 1px;
   }
 
@@ -132,15 +132,15 @@
   @media (min-width: $tablet-width) {
     transition: opacity 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transition: opacity 0.1s;
       opacity: 0.6;
+      outline: none;
     }
 
-    &:active,
-    &:focus {
+    &:active {
       opacity: 0.3;
-      outline: none;
     }
 
     &--next {

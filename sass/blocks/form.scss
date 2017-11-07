@@ -232,7 +232,26 @@
 }
 
 .form__row {
+  position: relative;
   padding-bottom: 24px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 58px;
+  transition: all 0.15s;
+  fill: rgba($black, 0.2);
+  pointer-events: none;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    right: 15px;
+  }
 }
 
 .form__input-label {
@@ -261,6 +280,10 @@
   &:focus,
   &:active {
     border-color: $color-turquoise;
+
+    & + .form__icon {
+      fill: $color-turquoise;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -284,6 +307,7 @@
   &:focus,
   &:active {
     border-color: $color-turquoise;
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {

@@ -22,15 +22,15 @@
 .promo-list__link {
   transition: opacity 0.3s;
 
-  &:hover {
-    transition: opacity 0.1s;
-    opacity: 0.6;
-  }
-
-  &:active,
+  &:hover,
   &:focus {
     transition: opacity 0.1s;
-    opacity: 0.3;
+    opacity: 0.6;
     outline: none;
+  }
+
+  &:active {
+    transition: opacity 0.1s;
+    opacity: 0.3;
   }
 }

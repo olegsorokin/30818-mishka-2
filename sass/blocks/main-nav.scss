@@ -51,15 +51,15 @@
     &[href] {
       transition: opacity 0.3s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         transition: opacity 0.1s;
         opacity: 0.6;
+        outline: none;
       }
 
-      &:active,
-      &:focus {
+      &:active {
         opacity: 0.3;
-        outline: none;
       }
     }
   }
