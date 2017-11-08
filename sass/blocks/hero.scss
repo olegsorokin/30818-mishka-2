@@ -9,7 +9,7 @@
   background-position: center top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/hero-tablet@2x.jpg");
+    background-image: url("../img/hero-mobile@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {

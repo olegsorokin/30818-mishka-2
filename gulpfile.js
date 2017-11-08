@@ -16,6 +16,7 @@ var rename = require("gulp-rename");
 var del = require("del");
 var server = require("browser-sync").create();
 var run = require('run-sequence');
+var uglify = require("gulp-uglify");
 
 gulp.task("serve", function() {
   server.init({
@@ -27,6 +28,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("js/*.js", ["js"]).on("change", server.reload);
   gulp.watch("*.html", ["html"]);
 });
 
@@ -42,6 +44,15 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("js", function() {
+  return gulp.src(["js/*.js", "!js/*.min.js"])
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("sprite", function () {
@@ -86,8 +97,8 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "js/**"
+    "img/**/*.{jpg,png,svg,webp}",
+    "js/script.min.js"
   ], {
     base: "."
   })
@@ -99,6 +110,7 @@ gulp.task("build", function (done) {
     "clean",
     "copy",
     "style",
+    "js",
     "sprite",
     "html",
     done

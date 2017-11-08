@@ -18,7 +18,7 @@
     </div>
 
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__logo">
@@ -42,10 +42,10 @@
           </ul>
           <ul class="main-nav__list  promo-list">
             <li class="promo-list__item">
-              <a class="promo-list__link" href="new.html">Новые поступления</a>
+              <a class="promo-list__link" href="catalog.html">Новые поступления</a>
             </li>
             <li class="promo-list__item">
-              <a class="promo-list__link" href="sale.html">Распродажа</a>
+              <a class="promo-list__link" href="catalog.html">Распродажа</a>
             </li>
           </ul>
           <ul class="main-nav__list  site-list  site-list--right">
@@ -120,7 +120,7 @@
           </picture>
           <div class="featured__buy">
             <span class="featured__cost">Цена: 990&nbsp;руб.</span>
-            <a class="featured__button  button" href="#">Заказать</a>
+            <button class="featured__button  button  js-add-to-cart">Заказать</button>
           </div>
         </div>
       </section>
@@ -181,7 +181,7 @@
               </button>
             </div>
           </div>
-          <a class="reviews__write  button" href="#">Написать</a>
+          <a class="reviews__write  button" href="form.html">Написать</a>
           <p class="reviews__toggles  visually-hidden  slider__toggles">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
@@ -208,7 +208,7 @@
             </li>
           </ul>
           <div class="contacts__map"></div>
-          <a class="contacts__write  button" href="#">Напишите нам</a>
+          <a class="contacts__write  button" href="form.html">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -243,7 +243,7 @@
       </div>
     </footer>
 
-    <section class="modal  visually-hidden">
+    <section class="modal  visually-hidden" id="modal">
       <div class="modal__wrapper">
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
           <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
@@ -260,6 +260,8 @@
         </form>
       </div>
     </section>
+
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>
