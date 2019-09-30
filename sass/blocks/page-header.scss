@@ -2,11 +2,48 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $color-gray-background;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    height: 17px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: center top;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 153px;
+
+    &::after {
+      display: block;
+    }
+  }
 }
 
 .page-header__wrapper {
-  position: relative;
-  padding: 0 30px;
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  background-color: $color-gray-background;
+}
+
+.page-header__title {
+  @include container();
+  margin: 75px auto 80px auto;
+  text-align: center;
+  font-size: 27px;
+  line-height: 1.2;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 105px;
+    margin-bottom: 88px;
+    font-size: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
+    font-size: 53px;
+  }
 }

@@ -1,6 +1,32 @@
 /* colors */
-$color-gray: #f9f9f9;
-$color-gray-placeholder: #cccccc;
-$color-gray-background: #f1f1f1;
-$color-turquoise: #63d1bb;
-$color-turquoise-dark: #56c3b2;
+$white:                    #ffffff;
+$black:                    #000000;
+$dark-gray:                #444444;
+
+$color-gray:               #f9f9f9;
+$color-gray-background:    #f1f1f1;
+$color-gray-placeholder:   #cccccc;
+$color-gray-border:        #ececec;
+$color-turquoise:          #63d1bb;
+$color-turquoise-hover:    #46c1ae;
+$color-turquoise-dark:     #56c3b2;
+
+/* typography */
+$font-family:              "Open Sans", "Arial", sans-serif;
+
+$size-base:                15px;
+
+$size-h1:                  27px;
+$size-h2:                  25px;
+$size-large:               19px;
+$size-element:             17px;
+
+/* view port */
+$tablet-width:            768px;
+$desktop-width:           1150px;
+
+$retina-dpi:              144dpi;
+$retina-dppx:             1.5dppx;
+
+/* other */
+$hero-transform-size:     5px;

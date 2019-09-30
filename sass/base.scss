@@ -1,14 +1,18 @@
 html {
-  font-size: 15px;
+  font-size: $size-base;
+}
+
+html,
+body,
+input,
+select,
+textarea {
+  font-family: $font-family;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-size: 25px;
+  position: relative;
+  min-width: 320px;
 }
 
 a {
@@ -16,48 +20,18 @@ a {
   color: inherit;
 }
 
-.visually-hidden {}
-
-/* grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1150px;
-  box-sizing: border-box;
-  padding: 0 30px;
-  margin: 0 auto;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.row {}
-
-.col {
-  width: 100%;
-}
-
-.col-16 {
-  width: 16.66%;
-}
-
-.col-25 {
-  width: 25%;
-}
-
-.col-33 {
-  width: 33.33%;
-}
-
-.col-50 {
-  width: 50%;
-}
-
-.col-66 {
-  width: 66.66%;
-}
-
-.col-75 {
-  width: 75%;
-}
-
-.col-83 {
-  width: 83.33%;
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }

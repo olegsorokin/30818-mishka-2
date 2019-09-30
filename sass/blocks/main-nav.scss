@@ -1,18 +1,136 @@
 .main-nav {
-  position: relative;
-  display: flex;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
-}
+  background-color: $white;
 
-.main-nav__toggle {}
+  @media (max-width: $tablet-width - 1) {
+    &--nojs {
+      .main-nav__wrapper {
+        height: auto;
+      }
+    }
+
+    &--closed {
+      .main-nav__wrapper {
+        overflow: hidden;
+      }
+    }
+  }
+}
 
 .main-nav__wrapper {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 81px;
+  line-height: 81px;
+
+  border-color: $color-gray-border;
+  border-style: solid;
+  border-width: 0;
+
+  z-index: 99;
+
+  @media (min-width: $tablet-width) {
+    @include container();
+    height: 88px;
+    line-height: 88px;
+    flex-flow: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    border-bottom-width: 1px;
+  }
 }
 
-.main-nav__list {}
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  flex-shrink: 0;
+
+  border-color: $color-gray-border;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex: 1 40%;
+    justify-content: flex-start;
+    height: 88px;
+    border-bottom-width: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 88px;
+    border-bottom-width: 0;
+  }
+}
+
+.main-nav__logo {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    &[href] {
+      transition: opacity 0.3s;
+
+      &:hover,
+      &:focus {
+        transition: opacity 0.1s;
+        opacity: 0.6;
+        outline: none;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.main-nav__logo-image {
+  display: block;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 39px;
+  right: 30px;
+  width: 20px;
+  height: 2px;
+  padding: 0;
+  background-color: $black;
+  border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &::after {
+    bottom: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__delivery {
+  display: none;
+  margin-top: 25px;
+  margin-left: auto;
+  order: 1;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}

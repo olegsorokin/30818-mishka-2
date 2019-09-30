@@ -5,62 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
-      <nav class="main-nav">
-        <a href="#" class="page-header__logo">
-          <img src="http://placehold.it/86x35" width="86" height="35" alt="Логотип магазина Мишка" class="page-header__logo-image">
-        </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="catalog.html">Каталог товаров</a>
+          <div class="main-nav__logo-wrapper">
+            <a class="main-nav__logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-nav__logo-image" src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
+              </picture>
+            </a>
+          </div>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
+          <ul class="main-nav__list  site-list  site-list--left">
+            <li class="site-list__item">
+              <a class="site-list__link">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на&nbsp;заказ</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Поиск по&nbsp;сайту</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Корзина: пока пуста</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
+          <ul class="main-nav__list  promo-list">
+            <li class="promo-list__item">
+              <a class="promo-list__link" href="catalog.html">Новые поступления</a>
+            </li>
+            <li class="promo-list__item">
+              <a class="promo-list__link" href="catalog.html">Распродажа</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list  site-list  site-list--right">
+            <li class="site-list__item">
+              <a class="site-list__link  site-list__link--search" href="search.html">
+                <svg class="site-list__icon" width="18" height="19"><use xlink:href="#icon-search"></use></svg><span>Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link  site-list__link--cart" href="cart.html">
+                <svg class="site-list__icon" width="21" height="18"><use xlink:href="#icon-cart"></use></svg><span>Корзина: пока пуста</span>
+              </a>
+            </li>
+          </ul>
+          <span class="main-nav__delivery">Бесплатная доставка по России</span>
         </div>
       </nav>
 
-      <section class="hero">
-        <div class="hero__wrapper">
-          <h1 class="hero__title">Милые штуки ручной работы для&nbsp;дома</h1>
-          <ul class="hero__list">
-            <li class="hero__item">
-              <a href="" class="hero__link">
-                <span class="hero__text">Предметы интерьера</span>
-                <span class="icon icon--interior"></span>
-              </a>
-            </li>
-            <li class="hero__item">
-              <a href="" class="hero__link">
-                <span class="hero__text">Детские игрушки</span>
-                <span class="icon icon--toy"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <div class="page-header__wrapper">
+        <h1 class="page-header__title">Каталог товаров</h1>
+      </div>
     </header>
 
     <main class="page-main">
       <section class="catalog">
         <div class="catalog__wrapper">
-          <h2 class="catalog__title visually-hidden">Каталог магазина Мишка</h2>
-          <article class="catalog__item goods">
-            <a href="" class="goods__image-link">
-              <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" class="goods__image">
+          <h2 class="catalog__title  visually-hidden">Каталог магазина Мишка</h2>
+          <article class="catalog__item  goods">
+            <a href="#" class="goods__image-link">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img class="goods__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Фотография товара Зайчик-попрыгайчик">
+              </picture>
             </a>
             <div class="goods__wrapper">
               <h3 class="goods__title">
@@ -71,13 +93,23 @@
               </div>
               <div class="goods__buy">
                 <span class="goods__cost">1 200&nbsp;руб.</span>
-                <a href="#" class="goods__basket" title="Положить в корзину">В корзину</a>
+                <a class="goods__basket  js-add-to-cart" title="Положить в корзину" href="#">
+                  <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg><span>В корзину</span>
+                </a>
               </div>
             </div>
           </article>
           <article class="catalog__item goods">
             <a href="" class="goods__image-link">
-              <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" class="goods__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img class="goods__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Фотография товара Корзинка для белья">
+              </picture>
             </a>
             <div class="goods__wrapper">
               <h3 class="goods__title">
@@ -88,13 +120,23 @@
               </div>
               <div class="goods__buy">
                 <span class="goods__cost">690&nbsp;руб.</span>
-                <a href="#" class="goods__basket" title="Положить в корзину">В корзину</a>
+                <a class="goods__basket  js-add-to-cart" title="Положить в корзину" href="#">
+                  <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg><span>В корзину</span>
+                </a>
               </div>
             </div>
           </article>
           <article class="catalog__item goods">
             <a href="" class="goods__image-link">
-              <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" class="goods__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img class="goods__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Фотография товара Большая корзинка для игрушек">
+              </picture>
             </a>
             <div class="goods__wrapper">
               <h3 class="goods__title">
@@ -105,24 +147,31 @@
               </div>
               <div class="goods__buy">
                 <span class="goods__cost">1 500&nbsp;руб.</span>
-                <a href="#" class="goods__basket" title="Положить в корзину">В корзину</a>
+                <a class="goods__basket  js-add-to-cart" title="Положить в корзину" href="#">
+                  <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg><span>В корзину</span>
+                </a>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="video">
-        <div class="video__wrapper">
-          <h2 class="video__title">Процесс производства</h2>
-          <div class="video__video-player">
-            <img src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства" title="Процесс производства">
+      <section class="manufacturing">
+        <div class="manufacturing__wrapper">
+          <div class="manufacturing__header">
+            <h2 class="manufacturing__title">Процесс производства</h2>
           </div>
-          <div class="video__content">
-            <p class="video__description">
+          <div class="manufacturing__video-player">
+            <video class="manufacturing__video-frame" src="#"></video>
+            <button class="manufacturing__video-toggle" type="button">
+              <span class="visually-hidden">Кнопка воспроизведения/паузы</span>
+            </button>
+          </div>
+          <div class="manufacturing__content">
+            <p class="manufacturing__description">
               По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас подробное видео о&nbsp;том, как появляются наши товары.
             </p>
-            <a class="video__order button" href="form.html">Сделать заказ</a>
+            <a class="manufacturing__order  button" href="form.html">Сделать заказ</a>
           </div>
         </div>
       </section>
@@ -130,45 +179,53 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a href="#" class="page-footer__logo">
-          <img src="http://placehold.it/86x35" width="86" height="35" alt="Мишка" class="page-footer__logo-image">
-        </a>
-        <div class="page-footer__social social">
-          <b class="social__title">Давайте дружить!</b>
+        <div class="page-footer__logo-wrapper">
+          <a href="#" class="page-footer__logo">
+            <svg class="page-footer__logo-image" width="86" height="35"><use xlink:href="#icon-logo-footer"></use></svg>
+          </a>
+        </div>
+        <div class="page-footer__social  social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мишка в Вконтакте</a>
+              <a class="social__link  social__link--vkontakte" href="https://www.instagram.com/htmlacademy"><svg class="social__icon" width="22" height="22"><use xlink:href="#icon-insta"></use></svg> Мишка в Инстаграм</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мишка в Фейсбуке</a>
+              <a class="social__link  social__link--facebook" href="https://www.facebook.com/htmlacademy"><svg class="social__icon" width="15" height="28"><use xlink:href="#icon-fb"></use></svg> Мишка в Фейсбуке</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мишка в Инстаграме</a>
+              <a class="social__link  social__link--instagram" href="https://twitter.com/htmlacademy_ru"><svg class="social__icon" width="24" height="21"><use xlink:href="#icon-twitter"></use></svg> Мишка в Инстаграме</a>
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="page-footer__copyright  copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <b class="copyright__text">Разработано:</b>
+            <svg class="copyright__logo-image" width="27" height="35"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </div>
       </div>
     </footer>
 
-    <section class="modal">
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
-        <p class="modal__choose">Выберите размер:</p>
-        <div class="modal__size-chart">
-          <input class="modal__input visually-hidden" type="radio" name="size" id="sizeS" value="S" checked>
-          <label class="modal__label" for="sizeS">S</label>
-          <input class="modal__input visually-hidden" type="radio" name="size" id="sizeM" value="M">
-          <label class="modal__label" for="sizeM">M</label>
-          <input class="modal__input visually-hidden" type="radio" name="size" id="sizeL" value="L">
-          <label class="modal__label" for="sizeL">L</label>
-        </div>
-        <button class="modal__add button button--green" type="submit">Добавить</button>
-      </form>
+    <section class="modal  visually-hidden" id="modal">
+      <div class="modal__wrapper">
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+          <p class="modal__choose">Выберите размер:</p>
+          <div class="modal__size-chart">
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="sizeS" value="S" checked>
+            <label class="modal__label" for="sizeS">S</label>
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="sizeM" value="M">
+            <label class="modal__label" for="sizeM">M</label>
+            <input class="modal__input  visually-hidden" type="radio" name="size" id="sizeL" value="L">
+            <label class="modal__label" for="sizeL">L</label>
+          </div>
+          <button class="modal__add  button  button--green" type="submit">Добавить</button>
+        </form>
+      </div>
     </section>
+
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

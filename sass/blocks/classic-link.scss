@@ -1,0 +1,22 @@
+.classic-link {
+  display: inline-block;
+  border-bottom: 1px solid #62d1ba;
+
+  @media (min-width: $tablet-width) {
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      transition: all 0.1s;
+      color: #46c1ae;
+      border-bottom: 1px solid #46c1ae;
+      outline: none;
+    }
+
+    &:active {
+      color: #46c1ae;
+      border-bottom: 1px solid #46c1ae;
+      opacity: 0.3;
+    }
+  }
+}
